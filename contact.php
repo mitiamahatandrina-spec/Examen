@@ -43,9 +43,9 @@
           <div class="card-body">
             <h5 class="card-title">PHARMACIE EN LIGNE</h5>
             <p><strong>Adresse :</strong> Rue des Écoles, Antananarivo</p>
-            <p><strong>Téléphone :</strong> +261 34 12 345 67</p>
+            <p><strong>Téléphone :</strong> +261 38 17 871 94</p>
             <p><strong>Email :</strong> contact@medc.mg</p>
-            <p><strong>Horaires :</strong> Lundi - Vendredi : 8h - 17h</p>
+            <p><strong>Horaires :</strong> Lundi - Vendredi : 8h -19h</p>
           </div>
         </div>
       </div>
