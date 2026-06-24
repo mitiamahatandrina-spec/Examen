@@ -92,9 +92,6 @@ $produits= [
             
         
     </p>
-
-
-
     <style>
                       table { border-collapse: collapse; width: 70%; margin: auto; }
                       th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
