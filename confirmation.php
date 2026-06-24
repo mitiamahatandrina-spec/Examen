@@ -46,29 +46,6 @@ if(!isset($_SESSION['connecte']) || $_SESSION['connecte'] !== true) {
         <a href="index.php">Retour à l'accueil</a>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer class=" text-white text-center">
                 <div class=" container">
                 <p>&copy; Mitia Kanto MAHATANDRINA</p>
