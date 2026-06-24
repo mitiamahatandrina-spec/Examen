@@ -1,55 +1,44 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
-</head>
-<body>
-    <div id="page-detail" class="page">
-            <div class="detail-container" id="product-detail-content"></div>
-        </div>
+    <?php
+session_start();
+require_once 'Class\Produit.php';
+require_once 'Class\Panier.php';
+include 'produits.php';
 
-        <div id="page-cart" class="page">
-            <h2 class="section-title">Votre Panier</h2>
-            <div class="cart-wrapper">
-                <div>
-                    <table class="cart-table">
-                        <thead>
-                            <tr>
-                                <th>Produit</th>
-                                <th>Prix</th>
-                                <th>Quantité</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody id="cart-table-body"></tbody>
-                    </table>
-                </div>
-                <div class="cart-summary">
-                    <h3>Résumé</h3>
-                    <br>
-                    <div class="summary-row">
-                        <span>Sous-total</span>
-                        <span id="cart-subtotal">0.00 €</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Livraison</span>
-                        <span>4.90 €</span>
-                    </div>
-                    <div class="summary-row summary-total">
-                        <span>Total TTC</span>
-                        <span id="cart-total">0.00 €</span>
-                    </div>
-                    <br>
-                    <button class="btn" style="width: 100%;" onclick="alert('Commande validée ! (Simulation)')">Passer la commande</button>
-                </div>
-            </div>
-        </div>
+$panier = $_SESSION['panier'] ?? new Panier();
+
+
+if(isset($_GET['supprimer'])) {
+    $id = intval($_GET['supprimer']);
+    unset($panier->articles[$id]); 
+    $_SESSION['panier'] = $panier;
+}
+?>
+<!DOCTYPE html>
+<html>
+<head><title>Panier</title></head>
+<body>
+<h2>Votre Panier</h2>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th><th>Produit</th><th>Prix</th><th>Quantité</th><th>Sous-total</th><th>Action</th>
+    </tr>
+    <?php foreach($panier->articles as $id => $article): ?>
+    <tr>
+        <td><?= $article['produit']->id; ?></td>
+        <td><?= $article['produit']->nom; ?></td>
+        <td><?= $article['produit']->prix; ?> Ar</td>
+        <td><?= $article['quantite']; ?></td>
+        <td><?= $article['produit']->prix * $article['quantite']; ?> Ar</td>
+        <td><a href="produits.php?supprimer=<?= $id; ?>">Supprimer</a></td>
+    </tr>
+    <?php endforeach; ?>
+    <tr>
+        <td colspan="4"><strong>Total</strong></td>
+        <td colspan="2"><strong><?= $panier->calculerTotal(); ?> Ar</strong></td>
+    </tr>
+</table>
 </body>
 </html>
-
-
 
 
