@@ -57,9 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <input type="password" name="motdepasse" class="form-control">
     </div>
     <button type="submit" class="btn btn-success">Connexion</button>
-  </form>
-
-
-  
+  </form>  
 </body>
 </html>
