@@ -65,9 +65,6 @@ session_start();
                 </div>
             </div>
         </div>
-
-
-
         <footer class="bg-success text-white text-center ">
                 <div class="container">
                 <p>&copy; Mitia Kanto MAHATANDRINA</p>
