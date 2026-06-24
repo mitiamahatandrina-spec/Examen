@@ -64,8 +64,6 @@ if(!isset($_SESSION['panier'])) {
         </div>
     </header>
 
-
-
     <img class="image"src="<?php echo $produit->image; ?>" alt="<?php echo $produit->nom;?>"
 <h2 class="texte"><?= $produit->nom; ?></h2>
 <p><?= $produit->description; ?></p>
