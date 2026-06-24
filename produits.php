@@ -17,6 +17,7 @@ if(isset($_POST['quantite'])){
             'prix'=>$prix,
             'quantite'=>$quantite,
             'Total'=>$prix*$quantite];
+            
     }
 }
 $produits= [

@@ -23,6 +23,7 @@ class Produit {
                 echo "<br>";
                 echo "Total: ". $this->calculTotal();
                 echo "<br>";
+                echo "prix_total: ". $this->calculPtotal();
 }
 }
 ?>
