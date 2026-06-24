@@ -118,7 +118,7 @@ $produits= [
             <td><?php  echo $p['nom']?></td>
             <td><?php  echo $p['prix']?>Ar</td>
             <td><?php  echo $p['quantite']?></td>
-            <td colspan="4"><?php  echo $p['Total']?>Ar</td>
+            <td colspan="4"><?phpecho $p['Total']?>Ar</td>
         </tr>
     <?php }?>
 </table>
